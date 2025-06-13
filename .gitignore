@@ -1,0 +1,20 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos de configuración sensibles
+.env
+.env.local
+config.php
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
