@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import OrganismLoginForm from './src/Components/organisms/OrganismLoginForm';
-import OrganismAdvisorForm from './src/Components/organisms/OrganismAdvisorForm';
 import OrganismStudentForm from './src/components/organisms/OrganismStudentForm';
-import OrganismTutorForm from './src/Components/organisms/OrganismTutorForm'; // ¡Importa el nuevo formulario!
 import colors from './src/constants/colors';
 import globalStyles from './src/styles/globalStyles';
 
@@ -14,12 +12,8 @@ const App = () => {
     switch (currentForm) {
       case 'login':
         return <OrganismLoginForm />;
-      case 'advisor':
-        return <OrganismAdvisorForm />;
       case 'student':
         return <OrganismStudentForm />;
-      case 'tutor': // Agrega un nuevo caso para el tutor
-        return <OrganismTutorForm />;
       default:
         return <OrganismLoginForm />;
     }
@@ -37,28 +31,12 @@ const App = () => {
             Login
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => setCurrentForm('advisor')}>
-          <Text style={[
-            styles.tabText,
-            currentForm === 'advisor' ? styles.activeTabText : null,
-          ]}>
-            Asesor
-          </Text>
-        </TouchableOpacity>
         <TouchableOpacity onPress={() => setCurrentForm('student')}>
           <Text style={[
             styles.tabText,
             currentForm === 'student' ? styles.activeTabText : null,
           ]}>
-            Alumno
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => setCurrentForm('tutor')}> {/* Nuevo botón */}
-          <Text style={[
-            styles.tabText,
-            currentForm === 'tutor' ? styles.activeTabText : null,
-          ]}>
-            Tutor
+            Registro Alumno
           </Text>
         </TouchableOpacity>
       </View>
