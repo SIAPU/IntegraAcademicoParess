@@ -1,97 +1,140 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# SIAPU - Sistema de Apoyo para Alumnos en Situación Vulnerable
 
-# Getting Started
+**Nombre del proyecto:** SIAPU  
+**Carpeta de trabajo:** `IntegraAcademicoPares`  
+**Plataforma:** React Native  
+**Propósito:** Monitoreo y apoyo académico integral para alumnos en situación de vulnerabilidad académica.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## Descripción
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+**SIAPU** (Sistema de Apoyo para Alumnos en Situación Vulnerable) es una aplicación móvil desarrollada con **React Native** que revoluciona el seguimiento y apoyo académico para estudiantes en situación de riesgo escolar. La plataforma integra tecnologías modernas para crear un ecosistema de soporte educativo completo.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Características principales:
+- **Detección proactiva** de estudiantes en riesgo académico
+- **Asignación inteligente** de recursos de apoyo y tutorías
+- **Seguimiento integral** del progreso estudiantil
+- **Comunicación fluida** entre todos los actores educativos
+- **Análisis de datos** para la toma de decisiones informadas
 
-```sh
-# Using npm
+---
+
+## Objetivos estratégicos
+
+### Objetivos primarios:
+- **Prevención:** Identificar tempranamente estudiantes en riesgo de reprobación
+- **Intervención:** Implementar estrategias de apoyo personalizadas
+- **Seguimiento:** Monitorear el progreso académico de forma continua
+- **Integración:** Conectar estudiantes, tutores y coordinadores académicos
+
+### Objetivos secundarios:
+- Reducir los índices de deserción escolar
+- Mejorar el rendimiento académico general
+- Fortalecer la comunicación institucional
+- Generar métricas y reportes para la toma de decisiones
+
+---
+
+## Funcionalidades principales
+
+### **Dashboard de monitoreo**
+- Visualización en tiempo real de estudiantes en riesgo
+- Indicadores de rendimiento académico por materia
+- Alertas automáticas de bajo rendimiento
+- Estadísticas generales del programa
+
+### **Gestión de estudiantes**
+- Perfil completo de cada alumno
+- Historial académico detallado
+- Registro de intervenciones previas
+- Sistema de etiquetas y categorización
+
+### **Sistema de asesorías**
+- Asignación automática e inteligente de tutores
+- Programación flexible de sesiones
+- Seguimiento por materia específica
+- Registro de asistencia y participación
+
+### **Gestión de horarios**
+- Calendario integrado para todas las partes
+- Programación de asesorías académicas
+- Recordatorios automáticos
+- Reprogramación de sesiones
+
+### **Registro de progreso**
+- Comentarios detallados por sesión
+- Sistema de calificaciones y evaluaciones
+- Notas del tutor sobre el desempeño
+- Planes de mejora personalizados
+
+### **Sistema de notificaciones**
+- Recordatorios para sesiones programadas
+- Alertas de cambios en el rendimiento
+- Notificaciones de tareas pendientes
+- Comunicación directa entre usuarios
+
+### **Reportes y análisis**
+- Reportes individuales de progreso
+- Análisis estadístico del programa
+- Métricas de efectividad de las intervenciones
+- Exportación de datos para análisis externos
+
+---
+
+## Tecnologías utilizadas
+
+### Frontend (React Native)
+- **React Native** v0.70+ - Framework principal
+- **Expo SDK** - Herramientas de desarrollo y despliegue
+- **React Navigation** v6 - Navegación entre pantallas
+- **React Native Elements** - Componentes UI
+- **React Native Vector Icons** - Iconografía
+
+### Backend y Base de datos
+- **Firebase** - Backend as a Service (BaaS)
+ - Authentication - Autenticación de usuarios
+ - Firestore - Base de datos NoSQL
+ - Cloud Functions - Lógica del servidor
+ - Cloud Messaging - Notificaciones push
+- **Node.js** - Entorno de ejecución (opcional)
+
+### Herramientas de desarrollo
+- **ESLint** - Linting y calidad de código
+- **Prettier** - Formateo de código
+- **Jest** - Testing framework
+- **TypeScript** - Tipado estático (opcional)
+- **Metro** - Bundler de React Native
+
+### Servicios adicionales
+- **React Native Paper** - Material Design components
+- **React Native Async Storage** - Almacenamiento local
+- **React Native Date Picker** - Selección de fechas
+- **React Native Chart Kit** - Gráficos y visualizaciones
+
+---
+
+## Configuración e instalación
+
+### Prerrequisitos
+- Node.js (v16 o superior)
+- npm o yarn
+- Expo CLI
+- Android Studio (para desarrollo en Android)
+- Xcode (para desarrollo en iOS, solo macOS)
+
+### Instalación
+```bash
+# Clonar el repositorio
+git clone <repository-url>
+cd IntegraAcademicoPares
+
+# Instalar dependencias
+npm install
+# o
+yarn install
+
+# Iniciar el proyecto
+expo start
+# o
 npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
