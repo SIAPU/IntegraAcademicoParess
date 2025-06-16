@@ -1,0 +1,220 @@
+# =============== Ignorar archivos y directorios globales/del sistema ===============
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon files
+Icon?
+# Thumbnails
+._*
+# Files that might appear on external hard drives
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotbackup
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+# Logs, history, etc.
+*.log
+*.swp
+.fuse_hidden*
+.nfs*
+
+# ============== Entornos de desarrollo / IDEs ================
+
+# Visual Studio Code
+.vscode/
+# Except for recommended extensions and settings for the project
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# IntelliJ / Android Studio / WebStorm / PhpStorm / PyCharm / RubyMine / etc.
+.idea/
+*.iml
+*.ipr
+*.iws
+.gradle/
+build/
+local.properties
+.cxx/
+.externalNativeBuild/
+captures/
+.kotlin/
+.dsm/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.apt_generated/
+.factorypath
+.metadata/
+
+# NetBeans
+nbproject/private/
+build/
+dist/
+nbbuild/
+.nbattrs
+*.zip
+
+# Visual Studio (for .NET projects, less common in JS but good to have)
+*.vspscc
+*.vssscc
+*.suo
+*.user
+*.config
+*.obj
+*.pdb
+*.bak
+*.sbr
+[Bb]in/
+[Oo]bj/
+# etc. (many more specific to VS, but these are common)
+
+# ================ Node.js / JavaScript / TypeScript =================
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Production builds
+dist/
+build/
+out/
+es/
+lib/
+tmp/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+# Yarn Plug'n'Play, keep these
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Environment variables
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Parcel cache
+.parcel-cache/
+
+# webpack
+.webpack/
+
+# SvelteKit
+.svelte-kit/
+
+# Next.js
+.next/
+
+# ==================== React Native / Mobile Development ====================
+
+# iOS (Xcode)
+xcuserdata/
+DerivedData/
+build/
+Pods/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.pbxproj
+*.ipa
+*.app
+
+# Android (Gradle)
+android/build/
+android/.gradle/
+android/local.properties
+android/app/build/
+android/app/.cxx/
+android/app/src/main/assets/
+android/gradle/
+# android/.idea/ # Already covered by general .idea/
+# android/*.iml # Already covered by general *.iml
+
+# Metro / Bundling
+.metro-health-check*
+*.jsbundle
+*.map
+
+# Fastlane (screenshots, reports, etc.)
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# ==================== Otros (ej. Docker, etc.) ====================
+
+# Docker
+*.dockerignore
+.docker/
+docker-compose.yaml.backup
+Dockerfile.backup
+
+# Composer (PHP)
+vendor/
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+.Python
+env/
+venv/
+
+# Ruby
+.bundle/
+/vendor/bundle/
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.test
+*.prof
+
+# Logs and temporary files (general)
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Database
+*.sqlite
+*.sql.zip
+*.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
