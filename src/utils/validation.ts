@@ -1,4 +1,4 @@
-import { StudentFormData, ValidationResult } from '../types';
+import { StudentFormData, ValidationResult, LoginFormData,LoginValidationResult } from '../types';
 
 export const validateForm = (data: StudentFormData): ValidationResult => {
   const errors: Partial<Record<keyof StudentFormData, string>> = {};
@@ -125,4 +125,30 @@ export const formatDate = (date: string): string => {
   if (match[3]) formatted += '/' + match[3];
   
   return formatted;
+};
+
+export const validateLoginForm = (data: LoginFormData): LoginValidationResult => {
+  const errors: Partial<Record<keyof LoginFormData, string>> = {};
+  let isValid: boolean = true;
+
+  // Validar email
+  const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!data.email.trim()) {
+    errors.email = 'El correo electrónico es obligatorio';
+    isValid = false;
+  } else if (!emailRegex.test(data.email)) {
+    errors.email = 'Ingresa un correo electrónico válido';
+    isValid = false;
+  }
+
+  // Validar contraseña
+  if (!data.password.trim()) {
+    errors.password = 'La contraseña es obligatoria';
+    isValid = false;
+  } else if (data.password.length < 6) {
+    errors.password = 'La contraseña debe tener al menos 6 caracteres';
+    isValid = false;
+  }
+
+  return { isValid, errors };
 };

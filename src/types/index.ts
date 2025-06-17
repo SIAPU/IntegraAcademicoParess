@@ -57,3 +57,17 @@ export interface FormSectionProps {
 export interface StudentRegistrationFormProps {
   onSubmit: (data: StudentFormData) => Promise<void>;
 }
+export interface LoginFormData {
+  email: string;
+  password: string;
+}
+
+export interface LoginValidationResult {
+  isValid: boolean;
+  errors: Partial<Record<keyof LoginFormData, string>>;
+}
+
+export interface LoginFormProps {
+  onSubmit: (data: LoginFormData) => Promise<void>;
+  onNavigateToRegister: () => void;
+}
