@@ -1,50 +1,119 @@
-# Welcome to your Expo app 👋
+# SIAPU - Sistema de Apoyo para Alumnos en Situación Vulnerable
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Nombre del proyecto:** SIAPU  
+**Carpeta de trabajo:** `IntegraAcademicoPares`  
+**Plataforma:** React Native con Expo  
+**Propósito:** Monitoreo y apoyo académico integral para alumnos en situación de vulnerabilidad académica.
 
-## Get started
+---
 
-1. Install dependencies
+## Descripción
 
-   ```bash
-   npm install
-   ```
+**SIAPU** (Sistema de Apoyo para Alumnos en Situación Vulnerable) es una aplicación móvil desarrollada con **React Native Expo** que facilita el seguimiento y apoyo académico para estudiantes en riesgo escolar. Utilizando el ecosistema Expo, ofrece una experiencia fluida y rápida para el desarrollo y despliegue, integrando funcionalidades para un soporte educativo efectivo.
 
-2. Start the app
+### Características principales:
+- **Detección proactiva** de estudiantes en riesgo académico  
+- **Asignación inteligente** de recursos de apoyo y tutorías  
+- **Seguimiento integral** del progreso estudiantil  
+- **Comunicación fluida** entre estudiantes, tutores y coordinadores  
+- **Análisis de datos** para tomar decisiones basadas en evidencia  
+- **Integración con APIs externas**, incluyendo Google Calendar para gestión y sincronización de horarios  
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Objetivos estratégicos
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Objetivos primarios:
+- **Prevención:** Identificar tempranamente a estudiantes con riesgo de reprobación  
+- **Intervención:** Proveer estrategias personalizadas de apoyo académico  
+- **Seguimiento:** Monitorear el desempeño académico de manera continua  
+- **Integración:** Facilitar la conexión entre alumnos, tutores y coordinadores  
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Objetivos secundarios:
+- Reducir la deserción escolar  
+- Mejorar el rendimiento académico general  
+- Fortalecer la comunicación institucional  
+- Generar métricas y reportes para la toma de decisiones  
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## Funcionalidades principales
 
-```bash
-npm run reset-project
-```
+### **Dashboard de monitoreo**
+- Visualización en tiempo real de estudiantes en riesgo  
+- Indicadores académicos por materia  
+- Alertas automáticas de bajo rendimiento  
+- Estadísticas globales del programa  
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### **Gestión de estudiantes**
+- Perfil completo de alumnos  
+- Historial académico detallado  
+- Registro de intervenciones previas  
+- Etiquetas y categorización inteligente  
 
-## Learn more
+### **Sistema de asesorías**
+- Asignación automática e inteligente de tutores  
+- Programación flexible y calendario integrado  
+- Seguimiento por materia  
+- Registro de asistencia y participación  
 
-To learn more about developing your project with Expo, look at the following resources:
+### **Gestión de horarios**
+- Calendario integrado para todos los usuarios  
+- Sincronización y gestión de eventos mediante la **API de Google Calendar**  
+- Recordatorios y notificaciones automáticas  
+- Opciones para reprogramar sesiones  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### **Registro de progreso**
+- Comentarios detallados por sesión  
+- Sistema de evaluaciones y calificaciones  
+- Notas y recomendaciones de tutores  
+- Planes de mejora personalizados  
 
-## Join the community
+### **Sistema de notificaciones**
+- Notificaciones push para sesiones y alertas  
+- Comunicación directa dentro de la app  
+- Recordatorios de tareas y fechas importantes  
 
-Join our community of developers creating universal apps.
+### **Reportes y análisis**
+- Reportes individuales y grupales  
+- Visualización estadística de la efectividad  
+- Exportación de datos para análisis externos  
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## Tecnologías utilizadas
+
+### Frontend (React Native Expo)
+- **Expo SDK** (última versión estable) — Framework principal para desarrollo rápido y multiplataforma  
+- **React Native** (incluido en Expo) — Desarrollo de interfaz nativa para iOS y Android  
+- **React Navigation** v6 — Navegación entre pantallas  
+- **React Native Paper** — Componentes UI basados en Material Design  
+- **React Native Vector Icons** — Iconografía  
+- **React Native Async Storage** — Almacenamiento local persistente  
+- **React Native DateTimePicker** — Selección de fechas y horarios  
+- **React Native Chart Kit** — Gráficos para visualización de datos  
+
+### Backend y Base de datos
+- **Firebase** — Backend as a Service (BaaS)  
+  - Authentication — Autenticación segura de usuarios  
+  - Firestore — Base de datos NoSQL en tiempo real  
+  - Cloud Functions — Lógica backend sin servidor  
+  - Cloud Messaging — Notificaciones push (integradas con Expo Notifications)  
+- **Expo Notifications** — Manejo de notificaciones push para dispositivos Expo  
+- **APIs externas**  
+  - **Google Calendar API** — Gestión y sincronización avanzada de calendarios y eventos  
+  - **Otras APIs** (a definir según necesidades futuras)  
+
+### Herramientas de desarrollo
+- **ESLint** — Análisis estático y calidad de código  
+- **Prettier** — Formateo automático de código  
+- **Jest** — Framework para pruebas unitarias  
+- **TypeScript** (opcional) — Tipado estático para mayor robustez  
+- **Metro** — Bundler y empaquetador de React Native  
+
+---
+
+## Notas adicionales
+
+- La integración con Google Calendar permite sincronizar automáticamente las asesorías y actividades programadas con los calendarios personales de usuarios, mejorando la gestión y recordatorios de sesiones.  
+- Se contempla la posibilidad de extender la app con otras APIs externas para enriquecer la experiencia educativa.  
