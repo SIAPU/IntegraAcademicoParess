@@ -150,9 +150,6 @@ const StudentLoginScreen: React.FC = () => {
     if (!validateForm()) return;
 
     setIsLoading(true);
-
-    // Lógica para determinar el rol basada en el correo (o desde un API real)
-    // ESTA ES UNA SIMULACIÓN. AJUSTA SEGÚN TU LÓGICA REAL DE AUTENTICACIÓN.
     let userRole: keyof typeof TEST_USERS | undefined;
     if (loginData.correoInstitucional.startsWith('alumno')) {
       userRole = 'alumno';
@@ -187,20 +184,12 @@ const StudentLoginScreen: React.FC = () => {
   };
 
   const handleForgotPassword = () => {
-    Alert.alert(
-      'Recuperar contraseña',
-      'Se enviará un enlace de recuperación a tu correo institucional',
-      [
-        { text: 'Cancelar', style: 'cancel' },
-        { text: 'Enviar', onPress: () => Alert.alert('Enviado', 'Revisa tu correo') }
-      ]
-    );
+    router.push('/RecuperarPassword'); 
+
   };
 
   const handleRegister = () => {
-    // Si 'register.tsx' está directamente en la carpeta 'app/'
     router.push('/register');
-    // Si estuviera en 'app/screens/RegisterScreen.tsx', la ruta sería '/screens/RegisterScreen'
   };
 
   return (
@@ -264,8 +253,6 @@ const StudentLoginScreen: React.FC = () => {
             style={[
               styles.loginButton,
               isLoading && styles.loginButtonDisabled,
-              // Color del botón ahora puede ser fijo o determinado por el rol si es posible inferirlo antes del login
-              // Por ahora, se usará un color por defecto o podrías intentar inferir un color si ya tienes el correo
               { backgroundColor: '#1DB954' }
             ]}
             onPress={handleLogin}
