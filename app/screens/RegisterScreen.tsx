@@ -95,10 +95,8 @@ const InputField: React.FC<InputFieldProps> = ({
   </View>
 );
 
-// --- COMPONENTE PRINCIPAL SpotifyRegisterForm ---
 const SpotifyRegisterForm: React.FC = () => {
-  const router = useRouter(); // Inicializa el hook de router
-
+  const router = useRouter(); 
   const [formData, setFormData] = useState<FormData>({
     nombre: '',
     apellidoPaterno: '',
@@ -115,8 +113,8 @@ const SpotifyRegisterForm: React.FC = () => {
     municipio: '',
     colonia: '',
     foto: null,
-    contrasena: '', // Estado para la contraseña
-    confirmarContrasena: '', // Estado para confirmar contraseña
+    contrasena: '', 
+    confirmarContrasena: '', 
   });
 
   const [errors, setErrors] = useState<Errors>({});
