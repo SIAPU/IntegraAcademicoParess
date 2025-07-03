@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 interface MenuItem {
   id: string;
@@ -8,6 +9,7 @@ interface MenuItem {
   iconName: keyof typeof Ionicons.glyphMap;
   backgroundColor: string;
   textColor: string;
+  path?: string;
 }
 
 const ActionMenuScreen: React.FC = () => {
@@ -18,6 +20,7 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'person-add',
       backgroundColor: '#28A745',
       textColor: '#FFFFFF',
+      path: '../',
     },
     {
       id: 'asistenciaAlumno',
@@ -25,6 +28,7 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'person',
       backgroundColor: '#6C757D',
       textColor: '#FFFFFF',
+      path: '../',
     },
     {
       id: 'reportarAlumno',
@@ -32,6 +36,7 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'alert-circle',
       backgroundColor: '#DC3545',
       textColor: '#FFFFFF',
+      path: '/Asesores/ReportarAlumno',
     },
     {
       id: 'estadisticasProgreso',
@@ -39,6 +44,7 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'stats-chart',
       backgroundColor: '#28A745',
       textColor: '#FFFFFF',
+      path: '../',
     },
     {
       id: 'gestionarGrupos',
@@ -46,6 +52,7 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'people',
       backgroundColor: '#343A40',
       textColor: '#FFFFFF',
+      path: '/Asesores/GestionarGrupos',
     },
     {
       id: 'ajustesGenerales',
@@ -53,17 +60,22 @@ const ActionMenuScreen: React.FC = () => {
       iconName: 'settings',
       backgroundColor: '#28A745',
       textColor: '#FFFFFF',
+      path: '../',
     },
   ];
 
-  const handleActionPress = (item: MenuItem) => {
-    Alert.alert('Acción del Menú', `Has seleccionado: ${item.label}`);
+const handleActionPress = (item: MenuItem) => {
+    // Si el elemento tiene una ruta definida, navega a ella
+    if (item.path) {
+      router.push(item.path);
+    } else {
+      Alert.alert('Acción no configurada', `La acción para "${item.label}" aún no tiene una ruta asignada.`);
+    }
   };
 
   const handleBackToMenu = () => {
-    Alert.alert('Navegación', 'Volver al menú anterior');
-    // Aquí iría tu lógica de navegación para volver, similar a cómo manejaste el login.
-    // Por ejemplo, si usas props de navegación o un manejador de estado global.
+    // Usa router.back() para volver a la pantalla anterior en la pila de navegación
+    router.back();
   };
 
   return (
@@ -71,7 +83,8 @@ const ActionMenuScreen: React.FC = () => {
       <View style={styles.header}>
         <Text style={styles.mainTitle}>SIAPU-UTTT</Text>
         <Text style={styles.headerSubtitle}>MENÚ DE ACCIONES</Text>
-        <Image source={{ uri: 'https://via.placeholder.com/50' }} style={styles.profileImage} />
+        {/* Usar una imagen local o un recurso estático si es posible en lugar de placeholder.com */}
+        <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOein9cEe4ZqNcDRVWDgfdiSs8OOcMr9Kwvg&s' }} style={styles.profileImage} />
       </View>
 
       <View style={styles.buttonsGrid}>
@@ -79,7 +92,7 @@ const ActionMenuScreen: React.FC = () => {
           <TouchableOpacity
             key={item.id}
             style={[styles.actionButton, { backgroundColor: item.backgroundColor }]}
-            onPress={() => handleActionPress(item)}
+            onPress={() => handleActionPress(item)} // Llama a la nueva función
           >
             <Ionicons name={item.iconName} size={40} color={item.textColor} />
             <Text style={[styles.actionButtonText, { color: item.textColor }]}>{item.label}</Text>
